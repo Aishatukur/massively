@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icon/icofont.min.css">
+    <title>Massively</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-image: url(images/bg.jpg);
+            font-size: 16px;
+            font-style: normal;
+            line-height: 38px;
+            background-position: top;
+        }
+        .wrapper{
+            background-color: #f5f5f5;
+            margin-left: 4em;
+            margin-right: 4em;
+            margin-bottom: 4em;
+        }
+        #header {
+            text-align: center;
+            height: 650px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;   
+        }
+        h1{
+            font-size: 80px;
+            color: white;
+            line-height: 80px;
+            margin-bottom: 20px;
+        }
+        #header >p {
+            color: white;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .header_link{
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px dotted;
+        }
+        #header >i {
+            border-radius: 50%;
+            color: white;
+            border: 2px solid white;
+            font-size: 20px;
+            padding: 15px;
+        }
+        main{
+            background-color: #f5f5f5;
+        }
+        nav{
+            background-color: #212931;
+            opacity: 0.7;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tabs{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        .links ,section.socials {
+            padding: 0 20px;
+        }
+        .links{
+            background-color: #212931;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+        .socials>i {
+            padding-left: 10px;
+        }
+        .links > a, .socials > i{
+            text-decoration: none;
+            color: white;
+        }
+        .tabs > .clicked{
+            background-color: white;
+        }
+        .links> a.active{
+            color: #1e252d;
+        }
+       .header{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+       } 
+       h2{
+        color: #212931;
+        font-size: 64px;
+        line-height: 70.4px;
+       } 
+       .header > p{
+        margin: 40px;
+        font-style: italic;
+       }
+       .header > img{
+        max-width: 100%;
+        margin: 0 100px;
+       }
+       .btn{
+        text-decoration: none;
+        border: 1px solid #212931;
+        padding: 12px 15px;
+        color: black;
+       } 
+       .blog{
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+       }
+       .blog section{
+        text-align: center;
+        border-color: #e2e2e2;
+        border-left-width: 2px;
+        border-style: solid;
+        padding: 40px;
+       }
+       .blog img{
+        width:100% ;
+        margin-bottom: 15px;
+       }     
+       .blog p, .blog h3{
+        margin-bottom: 15px;
+       }
+       .pagination{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+       }
+       .pagination div{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #e2e2e2;
+        text-align: center;
+        font-size: 0.8em;
+       }
+     section.pagination > div:nth-child(8){
+        width: auto;
+        padding: 0 15px;
+     }
+     section.pagination > div:nth-child(8) > i{
+        width: auto;
+        padding-left:10px;
+     }
+     .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #f5f5f5;
+        height: 100%;
+        
+     }
+     form{
+        width: 70%;
+        padding: 20px;
+     }
+     .group{
+        margin: 10px 10px;
+     }
+     input[type="text"],input[type="email"],textarea{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+        margin: 0;
+        border: 2px solid #e2e2e2;
+        background-color: transparent;
+     }
+     input[type="button"]{
+        width: 50%;
+        padding: 10px;
+        font-size: 20px;
+        border: 2px solid #717981;
+        background-color: transparent;
+        font-size: 0.8em;
+        margin-top: 15px;
+     }
+     label{
+        margin-top: 0;
+        font-size: 0.8em;
+        color: #717981;
+     }
+     footer{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+     }
+     footer section{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: wrap;
+        padding-left: 40px;
+        border: 2px solid #e2e2e2;
+        font-size: 0.8em;
+     }
+     footer section >p{
+      padding-left: 30px;
+     }
+      #footer_icons >i{
+           border-radius: 50%;
+           color: #717981;
+           border: 2px solid #e2e2e2;
+           font-size: 16px;
+           padding: 8px;
+     }
+
+    </style>
+</head>
+<body>
+    <section id="header">
+        <h1>THIS IS <br> MASSIVELY</h1>
+        <P>A free, fully responsive HTML + CSS3 site template designed by <a href="http://twitter.com/ajlkn" class="header_link">@ajlkn</a> for HTMLS5 UP <br> and released for free under the creative commons license</P>
+        <i class="icofont-arrow-down"></i>
+    </section>
+
+    <section class="wrapper">
+        <main>
+            <nav>
+                <section class="tabs">
+                    <section class="links clicked">
+                        <a href="#" class="active">link 1</a>
+                    </section>
+                    <section class="links">
+                        <a href="#">link 2</a>
+
+                    </section>
+                    <section class="links">
+                        <a href="#">link 3</a>
+
+                    </section>
+                </section>
+                <section class="socials">
+                    <i class="icofont-facebook"></i>
+                    <i class="icofont-twitter"></i>
+                    <i class="icofont-instagram"></i>
+                    <i class="icofont-github"></i>
+             </section>
+            </nav>
+
+            <section class="header">
+                <p>september 30, 2023</p>
+                <h2>This is post header</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quod, delectus qui odit ut ipsa reiciendis natus aperiam vitae doloremque.</p>
+                <img src="images/pic01.jpg" alt="" srcset="">
+                <p><a href="#" class="btn">FULL STORY</a></p>
+            </section>
+            <section class="blog">
+                <section>
+                    <p>September 30,2023</p>
+                    <h3>This is a Title</h3>
+                    <img src="images/pic02.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo perferendis possimus accusantium nesciunt porro aperiam nulla expedita magnam. Repudiandae.</p>
+                    <p><a href="#" class="btn">FULL STORY</a></p>
+                </section>
+                <section>
+                    <p>September 30,2023</p>
+                    <h3>This is a Title</h3>
+                    <img src="images/pic03.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo perferendis possimus accusantium nesciunt porro aperiam nulla expedita magnam. Repudiandae.</p>
+                    <p><a href="#" class="btn">FULL STORY</a></p>
+                </section>
+                <section>
+                    <p>September 30,2023</p>
+                    <h3>This is a Title</h3>
+                    <img src="images/pic04.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo perferendis possimus accusantium nesciunt porro aperiam nulla expedita magnam. Repudiandae.</p>
+                    <p><a href="#" class="btn">FULL STORY</a></p>
+                </section>
+                <section>
+                    <p>September 30,2023</p>
+                    <h3>This is a Title</h3>
+                    <img src="images/pic05.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo perferendis possimus accusantium nesciunt porro aperiam nulla expedita magnam. Repudiandae.</p>
+                    <p><a href="#" class="btn">FULL STORY</a></p>
+                </section>
+                <section>
+                    <p>September 30,2023</p>
+                    <h3>This is a Title</h3>
+                    <img src="images/pic06.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo perferendis possimus accusantium nesciunt porro aperiam nulla expedita magnam. Repudiandae.</p>
+                    <p><a href="#" class="btn">FULL STORY</a></p>
+                </section>
+                <section>
+                    <p>September 30,2023</p>
+                    <h3>This is a Title</h3>
+                    <img src="images/pic07.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo perferendis possimus accusantium nesciunt porro aperiam nulla expedita magnam. Repudiandae.</p>
+                    <p><a href="#" class="btn">FULL STORY</a></p>
+                </section>
+            </section>
+        </main>
+        <section class="pagination">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>...</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>Next <i class="icofont-ui-next"></i></div>
+        </section>
+
+        <section class="footer">
+            <form action="">
+                <section class="group">
+                    <label for="name">Name</label>
+                    <input type="text" name="Fullname">
+                </section>
+                <section class="group">
+                    <label for="email">Email</label>
+                    <input type="email" name="Fullname">
+                </section>
+                <section class="group">
+                    <label for="message">Message</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </section>
+                <section class="group">
+                    <input type="button" value="Send Message">
+                </section>
+            </form>
+            <footer>
+                <section>
+                    <h3>Address</h3>
+                    <p>Somewhere around marmara</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p>(234) 0123-4567</p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p>info@example.com</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <p id="footer_icons">
+                        <i class="icofont-twitter"></i>
+                        <i class="icofont-facebook"></i>
+                        <i class="icofont-instagram"></i>
+                        <i class="icofont-github"></i>
+                   </p>
+                </section>
+            </footer>
+
+        </section>
+    </section>
+</body>
+</html>
